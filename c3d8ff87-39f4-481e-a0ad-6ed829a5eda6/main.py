@@ -17,7 +17,7 @@ class TradingStrategy(Strategy):
 
     def run(self, data):
         self.count += 1
-        if (self.count % 30 == 1):
+        if (self.count % 30 == 0):
             allocation_dict = {'SPY':60, 'GLD':40}
             return TargetAllocation(allocation_dict)
         return None
